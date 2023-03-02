@@ -4,6 +4,7 @@ public class Demorest {
     private String nombre;
     private double numero;
 
+    public Demorest(){}
     public Demorest(String nombre, double numero) {
         this.nombre = nombre;
         this.numero = numero;

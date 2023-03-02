@@ -1,0 +1,7 @@
+POST http://localhost:8080/demorest
+Content-Type: application/json
+
+{
+  "nombre": "hola2",
+  "valor": 3.506
+}
