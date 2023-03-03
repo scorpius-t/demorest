@@ -2,11 +2,12 @@ package com.javaavanzado.demorest.demorest.controller;
 
 import com.javaavanzado.demorest.demorest.models.Demorest;
 import com.javaavanzado.demorest.demorest.service.DemorestService;
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.Response;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,23 +53,16 @@ public class DemorestController {
         return demorestService.get(nombre);
     }
 
-    //@POST
-    //@Path("/demorest")
-    @PostMapping("/demorest")
-    @Produces("plain/text")//aplication/json
-    @Consumes("plaint/text")
-    public Response agregarDemorest(String mensaje){
-        System.out.println("mensaje");
-        return Response.accepted("mensaje").build();
-    }
-    /*
+    @POST
+    @Path("/demorest/v2")
+    @Consumes("application/json")
+
     public Response agregarDemorest(Demorest demorest){
         demorestService.add(demorest);
+        System.out.println(demorest.toString());
         return Response.created(
                 URI.create("/demorest/"+demorest.getNombre()))
                 .build();
     }
-
-     */
 
 }

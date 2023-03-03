@@ -25,4 +25,12 @@ public class Demorest {
     public void setNumero(double numero) {
         this.numero = numero;
     }
+
+    @Override
+    public String toString() {
+        return "Demorest{" +
+                "nombre='" + nombre + '\'' +
+                ", numero=" + numero +
+                '}';
+    }
 }

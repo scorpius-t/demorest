@@ -1,8 +1,10 @@
 package com.javaavanzado.demorest.demorest.config;
 
-import jakarta.ws.rs.ApplicationPath;
+
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
+
+import javax.ws.rs.ApplicationPath;
 
 @ApplicationPath("/")
 @Component
